@@ -1,13 +1,13 @@
 import { clientServices } from "../services/client-service.js";
 import { adminControler } from "./admin.controller.js";
 
-//Nueva busqueda
+
 const productos = document.querySelector("[data-productos-admin]");
 const buscador = document.querySelector("[data-buscador]");
 const tituloBusqueda = document.querySelector("[data-titulo-busqueda]");
 let cantResultNuevaBusqueda = 0;
 
-//Enviando nombre de la busqueda a pagina resultados busqueda
+
 buscador.addEventListener("keypress", evento => {
   let texto = evento.target.value;
     if (evento.key === 'Enter') {

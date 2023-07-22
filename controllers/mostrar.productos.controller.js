@@ -1,6 +1,6 @@
-//Creando la card del producto
+
 export const MostrarProductos = (nombre, precio, descripcion, imagen, id, categoria) => {
-  //Creando el div que guarda todo el card
+
   const cardProducto = document.createElement("div");
   cardProducto.className = "producto__card";
   const contenido = `

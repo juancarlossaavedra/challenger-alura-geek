@@ -1,4 +1,4 @@
-//Conexion
+
 const listaProductos = () => fetch('https://zealous-loincloth-bass.cyclic.app/productos').then(respuesta => respuesta.json());
 
 const crearProducto = (nombre, precio, imagen, categoria, descripcion) => {
@@ -17,7 +17,7 @@ const eliminarProducto = (id) => {
   });
 };
 
-//Detalles del producto por ID
+
 const detalleProducto = async (id) => {
   return fetch(`https://zealous-loincloth-bass.cyclic.app/productos/${id}`).then( respuesta => respuesta.json());
 };

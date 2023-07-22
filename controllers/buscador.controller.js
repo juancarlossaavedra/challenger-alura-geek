@@ -1,7 +1,7 @@
 import { clientServices } from "../services/client-service.js";
 import { MostrarProductos } from "./mostrar.productos.controller.js";
 
-//Contenedor de resultados buscados
+
 const resultados = document.querySelector("[data-productos-busqueda]");
 const tituloBusqueda = document.querySelector("[data-titulo-busqueda]");
 
@@ -15,7 +15,7 @@ const mostrarResultadoBuscado = async () => {
   const nombreBuscar = nombreBuscado.toLowerCase();
 
   let cantidadResultados = 0;
-  //Resultados busqueda
+ 
   clientServices.listaProductos().then(data => {
     data.forEach(({nombre, precio, descripcion, imagen, id, categoria}) => {
       const nombreProducto = nombre.toLowerCase();
@@ -29,7 +29,7 @@ const mostrarResultadoBuscado = async () => {
         cantidadResultados++;
       }
     });
-    //Mostrar mensajes cuando no haya resultados
+
     if(cantidadResultados == 0){
       const textoInformativo = `
       <h2 class="productos__resultados_mensaje">No se encontraron resultados para esta busqueda</h2>
@@ -40,11 +40,11 @@ const mostrarResultadoBuscado = async () => {
 }
 mostrarResultadoBuscado();
 
-//Nueva busqueda
+
 const buscador = document.querySelector("[data-buscador]");
 let cantResultNuevaBusqueda = 0;
 
-//Enviando nombre de la busqueda a pagina resultados busqueda
+
 buscador.addEventListener("keypress", evento => {
   let texto = evento.target.value;
     if (evento.key === 'Enter') {

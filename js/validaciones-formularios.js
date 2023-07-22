@@ -22,7 +22,7 @@ const tipoDeErrores = [
 
 const mensajesDeError = {
 
-  //Inputs login
+
 
   usuario:{
     valueMissing:"El campo usuario no puede estar vacio",
@@ -31,7 +31,6 @@ const mensajesDeError = {
     valueMissing:"El campo contraseña no puede estar vacio",
   },
 
-  //Inputs contactanos
 
   nombre:{
     valueMissing:"El campo Nombre no puede estar vacio"
@@ -40,7 +39,7 @@ const mensajesDeError = {
     valueMissing:"El campo Mensaje no puede estar vacio",
   },
 
-  //Inputs agregar producto
+ 
 
   nombreProducto:{
     valueMissing:"El campo Nombre del Producto no puede estar vacio",
