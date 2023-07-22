@@ -1,8 +1,8 @@
 import { clientServices } from "../services/client-service.js";
 
-
+//Creando la card del producto
 const mostrarProductosRelacionados = (nombre, precio, descripcion, imagen, id, categoria) => {
-
+  //Creando el div que guarda todo el card
   const cardProducto = document.createElement("div");
   cardProducto.className = "producto__card";
   const contenido = `
@@ -19,18 +19,18 @@ const mostrarProductosRelacionados = (nombre, precio, descripcion, imagen, id, c
 const obtenerInformacion = async () => {
 
   const url = new URL(window.location);
-  const id = url.searchParams.get("id"); 
+  const id = url.searchParams.get("id"); //Extraccion ID de la URL
 
   if(id === null){
     console.log("Hubo error al momento de buscar el producto")
   }
 
-  /
+  //Traemos la informacion del producto que fue clickado
   try{
     const producto = await clientServices.detalleProducto(id);
-    
+    //Validamos que ese ID tenga informacion
     if(producto.nombre && producto.precio && producto.descripcion && producto.imagen){
-      
+      //Contenedo de la informacion
       const infoProducto = document.querySelector("[data-producto]");
 
       const contenido = `
@@ -41,17 +41,17 @@ const obtenerInformacion = async () => {
             <p class="producto__info__descripcion">${producto.descripcion}</p>
         </div>
       ` 
-     
+      //Pasamos los detalles del producto
       infoProducto.innerHTML = contenido;
 
-      
+      //Productos relacionados segun categoria
       const categoriaSolicitada = producto.categoria;
       const idProductoVisto = producto.id;
 
       const productosSimilares = document.querySelector("[data-productos-similares]");
       clientServices.listaProductos().then(data => {
         data.forEach(({nombre, precio, descripcion, imagen, id, categoria}) => {
-          
+          //Imprimir datos en el index
           if(categoria === "Star wars" && categoriaSolicitada === "Star wars" && idProductoVisto != id){
             const nuevoProducto = mostrarProductosRelacionados(nombre, precio, descripcion, imagen, id, categoria);
             productosSimilares.appendChild(nuevoProducto);

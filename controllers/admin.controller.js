@@ -2,9 +2,9 @@ import { clientServices } from "../services/client-service.js";
 
 const productos = document.querySelector("[data-productos-admin]");
 
-
+//Creando la card del producto
 const MostrarProductosAdmin = (nombre, precio, descripcion, imagen, id, categoria) => {
-
+  //Creando el div que guarda todo el card
   const cardProducto = document.createElement("div");
   cardProducto.className = "producto__card";
   const contenido = `

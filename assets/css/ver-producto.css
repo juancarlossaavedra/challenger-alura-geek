@@ -13,7 +13,7 @@
 
 .producto__imagen{
     width: 30%;
-    
+    /* height: 437px; */
 }
 
 .producto__info{
@@ -39,7 +39,9 @@
     line-height: 1.3;
 }
 
-
+/* ------------------------------------ */
+/* ----- Responsive para Mobiles ------ */
+/* ------------------------------------ */
 
 @media only screen and (max-width: 767px){
 
@@ -65,6 +67,9 @@
     }
 } 
 
+/* ------------------------------------ */
+/* ----- Responsive para Tablets ------ */
+/* ------------------------------------ */
 
  @media (min-width:768px) and (max-width:1024px){
 
