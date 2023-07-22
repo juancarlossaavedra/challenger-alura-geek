@@ -18,7 +18,7 @@ formulario.addEventListener("submit", (eventoSubmit) => {
   <img class="imagen-drop-img__pantalla-mobile" src="../assets/img/Vector-imagen_mobile.svg" alt="icono agrega imagen">
   <p class="imagen-drop-texto">Arrastre para agregar una imagen para el producto</p>
   `
-  //Enviando datos a la funcion que crea el producto
+  
   clientServices
   .crearProducto(nombre, precio, fileURL, categoria, descripcion)
   .then(() => {
