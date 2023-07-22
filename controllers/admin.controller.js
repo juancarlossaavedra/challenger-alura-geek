@@ -2,9 +2,9 @@ import { clientServices } from "../services/client-service.js";
 
 const productos = document.querySelector("[data-productos-admin]");
 
-//Creando la card del producto
+
 const MostrarProductosAdmin = (nombre, precio, descripcion, imagen, id, categoria) => {
-  //Creando el div que guarda todo el card
+
   const cardProducto = document.createElement("div");
   cardProducto.className = "producto__card";
   const contenido = `
@@ -54,14 +54,14 @@ const MostrarProductosAdmin = (nombre, precio, descripcion, imagen, id, categori
   return cardProducto;
 }
 
-//Capturando la seccion para mostrar los productos
+
 const productosAdmin = document.querySelector("[data-productos-admin]");
 
 const imprimirProductos = () => {
-  //Recorrer los datos traidos del JSON
+
   clientServices.listaProductos().then(data => {
     data.forEach(({nombre, precio, descripcion, imagen, id, categoria}) => {
-      //Imprimir datos en el index
+
       const nuevoProducto = MostrarProductosAdmin(nombre, precio, descripcion, imagen, id, categoria);
       productosAdmin.appendChild(nuevoProducto);
     });

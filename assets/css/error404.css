@@ -54,9 +54,7 @@ main{
 }
 
 
-/* ------------------------------------ */
-/* ----- Responsive para Mobiles ------ */
-/* ------------------------------------ */
+
 
 @media only screen and (max-width: 767px){
 
@@ -100,9 +98,6 @@ main{
 
 }
 
-/* ------------------------------------ */
-/* ----- Responsive para Tablets ------ */
-/* ------------------------------------ */
 
 @media (min-width:768px) and (max-width:1024px){
 
@@ -111,7 +106,7 @@ main{
   }
 
   .informacion__error{
-    /* height: 100%; */
+
     height: auto;
     display: flex;
     flex-direction: column;
